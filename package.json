@@ -5,6 +5,7 @@
   "main": "postcss.config.js",
   "dependencies": {},
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.3.0",
     "autoprefixer": "^10.3.7",
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.17",
