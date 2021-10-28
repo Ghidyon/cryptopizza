@@ -1,6 +1,3 @@
-#tailwind build
-build/tailwind.css
-
 # Logs
 logs
 *.log

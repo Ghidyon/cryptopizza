@@ -7,12 +7,14 @@
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "autoprefixer": "^10.3.7",
-    "postcss": "^8.3.11",
-    "tailwindcss": "^2.2.17",
-    "vite": "^2.6.12"
+    "cssnano": "^5.0.8",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.17"
   },
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "TAILWIND_MODE=watch postcss tailwind.css -o ./style.css --watch --verbose",
+    "prod": "NODE_ENV=production postcss tailwind.css -o ./style.css"
   },
   "repository": {
     "type": "git",
