@@ -8,9 +8,19 @@ const body = document.querySelector("body");
 menuButton.addEventListener("click", () => {
     sidebar.classList.remove("-translate-x-full");
     body.classList.add("overflow-hidden");
+    sidebar.classList.add("overlay-effect");
 });
 
 closeButton.addEventListener("click", () => {
     sidebar.classList.add("-translate-x-full");
     body.classList.remove("overflow-hidden");
+    sidebar.classList.remove("overlay-effect");
 });
+
+// document.addEventListener("click", () => {
+//     if (sidebar.classList.contains("overlay-effect")) {
+//         sidebar.classList.add("-translate-x-full");
+//         body.classList.remove("overflow-hidden");
+//         sidebar.classList.remove("overlay-effect");
+//     }
+// });
