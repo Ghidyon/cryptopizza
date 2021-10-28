@@ -13,8 +13,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "TAILWIND_MODE=watch postcss tailwind.css -o ./style.css --watch --verbose",
-    "prod": "NODE_ENV=production postcss tailwind.css -o ./style.css"
+    "build": "TAILWIND_MODE=watch postcss tailwind.css -o ./assets/style.css --watch --verbose",
+    "prod": "NODE_ENV=production postcss tailwind.css -o ./assets/style.css"
   },
   "repository": {
     "type": "git",
