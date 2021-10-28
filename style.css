@@ -699,6 +699,12 @@ video {
 .mt-8{
     margin-top: 2rem;
 }
+.mb-4{
+    margin-bottom: 1rem;
+}
+.mb-8{
+    margin-bottom: 2rem;
+}
 .block{
     display: block;
 }
@@ -740,6 +746,9 @@ video {
 }
 .border-b-2{
     border-bottom-width: 2px;
+}
+.border-t-2{
+    border-top-width: 2px;
 }
 .border-solid{
     border-style: solid;
@@ -786,6 +795,10 @@ video {
 .py-3{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+}
+.py-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
 }
 .text-center{
     text-align: center;
