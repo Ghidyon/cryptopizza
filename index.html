@@ -16,35 +16,36 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
 </head>
 <body class="bg-gray-100 font-manrope">
-    <!-- Navigation Bar -->
-    <div class="container">
-        <header class="px-4">
-        <nav class="flex justify-between border-b-2 border-gray-200 py-4">
-            <!-- Hamburger on small devices -->
-            <div>
-                <svg 
-                xmlns="<http://www.w3.org/2000/svg>"
-                id="menu-button"
-                class="h-6 w-6 cursor-pointer md:hidden block"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+    <!-- Mobile Navigation Bar -->
+    <div id="sidebar" class="bg-red-400 w-3/4 min-h-screen z-50 absolute inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:hidden">
+        <nav class="px-6">
+            <div class="flex justify-end py-4 cursor-pointer" id="x-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </div>
-            <div>
-                <ul class="flex">
-                    <li class="mr-3">
+            <div class="">
+                <ul>
+                    <li class="border-b border-solid border-gray-200 py-3"><a href="">Home</a></li>
+                    <li class="border-b border-solid border-gray-200 py-3"><a href="">Pricing</a></li>
+                    <li class="border-b border-solid border-gray-200 py-3"><a href="">About</a></li>
+                    <li class="border-b border-solid border-gray-200 py-3"><a href="">Lorem</a></li>
+                </ul>
+                <div class="flex justify-center pt-9 pb-5">
+                    <a href="" class="font-inter text-white bg-green-600 border border-solid border-green-600 hover:bg-transparent hover:text-green-600 font-bold px-8 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150">Login</a>
+                </div>
+                <ul class="flex justify-center space-x-4">
+                    <li class="">
                         <a href="#">
                             <i class="fab fa-twitter text-2xl opacity-75"></i>
                         </a>
                     </li>
-                    <li class="mr-3">
+                    <li class="">
                         <a href="">
                             <i class="fab fa-youtube text-2xl opacity-75"></i>
                         </a>
                     </li>
-                    <li class="mr-3">
+                    <li class="">
                         <a href="">
                             <i class="fab fa-facebook-square text-2xl opacity-75"></i>
                         </a>
@@ -52,17 +53,49 @@
                 </ul>
             </div>
         </nav>
-        <nav class="flex justify-between py-2">
-            <div>
-                <img src="/src/" alt="Crypto Pizza Logo">
-            </div>
-            <div>
-                <ul class="flex">
-                    <li class="mr-3"><a href="#!">Login</a></li>
-                    <li class="mr-3"><a href="#!">Register</a></li>
-                </ul>
-            </div>
-        </nav>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="container mx-auto">
+        <header class="px-4">
+            <nav class="flex justify-between border-b-2 border-gray-200 py-4">
+                <!-- Hamburger on small devices -->
+                <button id="menu-button" class="cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:hidden block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h7" />
+                      </svg>
+                </button>
+                <div>
+                    <ul class="flex">
+                        <li class="mr-3">
+                            <a href="#">
+                                <i class="fab fa-twitter text-2xl opacity-75"></i>
+                            </a>
+                        </li>
+                        <li class="mr-3">
+                            <a href="">
+                                <i class="fab fa-youtube text-2xl opacity-75"></i>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="">
+                                <i class="fab fa-facebook-square text-2xl opacity-75"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="flex justify-between items-center py-2">
+                <div class="w-11">
+                    <img src="assets/images/logo.png" alt="Crypto Pizza Logo">
+                </div>
+                <div>
+                    <ul class="flex">
+                        <li class="mr-3"><a href="#!">Login</a></li>
+                        <li class=""><a href="#!">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
         </header>
     </div>
 
@@ -137,4 +170,5 @@
     </footer>
 </body>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="assets/index.js"></script>
 </html>
