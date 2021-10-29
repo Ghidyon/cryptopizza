@@ -16,11 +16,3 @@ closeButton.addEventListener("click", () => {
     body.classList.remove("overflow-hidden");
     sidebar.classList.remove("overlay-effect");
 });
-
-// document.addEventListener("click", () => {
-//     if (sidebar.classList.contains("overlay-effect")) {
-//         sidebar.classList.add("-translate-x-full");
-//         body.classList.remove("overflow-hidden");
-//         sidebar.classList.remove("overlay-effect");
-//     }
-// });
