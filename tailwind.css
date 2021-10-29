@@ -17,6 +17,10 @@
     box-shadow: 0 0 0 100vmax rgba(0,0,0,0.6);
 }
 
+.bg-dark {
+    background-color: #161616;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
