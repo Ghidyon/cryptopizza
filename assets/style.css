@@ -740,6 +740,9 @@ video {
 .flex{
     display: flex;
 }
+.hidden{
+    display: none;
+}
 .h-6{
     height: 1.5rem;
 }
@@ -823,6 +826,16 @@ video {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
     margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-8 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem * var(--tw-space-x-reverse));
+    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-10 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .overflow-hidden{
     overflow: hidden;
@@ -929,6 +942,12 @@ video {
 .pb-5{
     padding-bottom: 1.25rem;
 }
+.pb-9{
+    padding-bottom: 2.25rem;
+}
+.pb-6{
+    padding-bottom: 1.5rem;
+}
 .text-center{
     text-align: center;
 }
@@ -955,6 +974,10 @@ video {
 .text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
+}
+.text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
 }
 .font-bold{
     font-weight: 700;
@@ -1031,7 +1054,17 @@ video {
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
+@media (min-width: 640px){
+
+    .sm\:hidden{
+        display: none;
+    }
+}
 @media (min-width: 768px){
+
+    .md\:block{
+        display: block;
+    }
 
     .md\:hidden{
         display: none;
