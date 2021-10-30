@@ -24,15 +24,15 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </div>
-            <div class="">
+            <div>
                 <div class="">
                     <a href="" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">Home</a>
                     <a href="" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">How it Works</a>
                     <a href="" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">About</a>
-                    <a href="" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">Login</a>
+                    <a href="" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">FAQ</a>
                 </div>
                 <div class="flex justify-center pt-9 pb-6">
-                    <a href="" class="bg-blue-800 border border-solid border-blue-800 hover:border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-xl">Register</a>
+                    <a href="" class="bg-blue-800 border border-solid border-blue-800 hover:border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-xl">Login</a>
                 </div>
                 <ul class="flex justify-center space-x-5">
                     <li class="">
@@ -60,14 +60,13 @@
         <header class="px-4">
             <nav class="flex justify-between items-center py-5">
                 <!-- Hamburger on small devices -->
-                <button id="menu-button" class="cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 md:hidden block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button id="menu-button" class="cursor-pointer md:hidden block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h7" />
                       </svg>
                 </button>
-                <div class="w-11">
-                    <!-- <img src="assets/images/logo.png" alt="Crypto Pizza Logo"> -->
-
+                <div class="w-11 hidden md:block">
+                    <img src="assets/images/logo.png" alt="Crypto Pizza Logo">
                 </div>
                 <div>
                     <ul class="flex space-x-10">
@@ -82,13 +81,16 @@
     </div>
 
     <!-- Main -->
-    <main class="text-center mx-auto py-8 px-4">
-        <h1 class="font-inter text-4xl my-3 uppercase">Cryptopizza</h1>
-        <p class="my-3 py-5 leading-9 text-gray-400 text-xl">Crypto pizza is a group of community members sharing the same vision and 
+    <main class="text-center py-8 px-4 md:text-left">
+        <h2 class="font-inter text-blue-600 my-3 uppercase tracking-wider">Cryptopizza</h2>
+        <h1 class="font-inter text-4xl md:text-5xl lg:text-6xl my-3">Access presales with little capital and gain massive returns.</h1>
+        <p class="my-3 py-5 leading-9 text-gray-400 text-xl">
+            Cryptopizza is a group of community members sharing the same vision and 
             collectively giving all to achieve that vision. The community strength is in the fact 
             that it strives to give every individual that cares to the opportunity, to join in 
-            building something great and impactful to the whole world.</p>
-        <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden my-10np">
+            building something great and impactful to the whole world.
+        </p>
+        <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden my-10">
             <iframe src="https://www.youtube.com/embed/Ew2BABdvZ4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="py-10 my-10">
@@ -97,7 +99,7 @@
     </main>
 
     <!-- Countdown -->
-    <div class="container px-4">
+    <div class="container px-4 mx-auto">
         <div class="rounded-lg text-center text-black bg-gray-500 flex justify-items-center justify-center items-center h-44">
             <p class="flex px-2 font-inter">
                 <span class="text-7xl animate-bounce">6,000</span>
