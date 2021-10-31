@@ -25,6 +25,12 @@
     background: #222;
 }
 
+@media (min-width: 1024px) {
+    .lg\:bg-light-dark {
+        background: #222;
+    }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
