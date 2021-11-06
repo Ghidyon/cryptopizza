@@ -15,7 +15,7 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
 </head>
-<body class="bg-dark font-manrope font-bold text-white">
+<body class="bg-dark font-manrope font-bold text-white scroll-smooth">
     <!-- Mobile Navigation Bar -->
     <div id="sidebar" class="bg-dark w-3/4 min-h-screen z-50 absolute inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:hidden">
         <nav class="px-6 md:hidden">
@@ -26,32 +26,32 @@
             </div>
             <div>
                 <div class="">
-                    <a href="" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">Home</a>
-                    <a href="" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">How it Works</a>
-                    <a href="" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">About</a>
-                    <a href="" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">FAQ</a>
+                    <a href="" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">Home</a>
+                    <a href="" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">How it Works</a>
+                    <a href="#about" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">About</a>
+                    <a href="" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">FAQ</a>
                 </div>
                 <div class="text-center pt-9 pb-6">
                     <div class="pb-6">
-                        <a href="" class="border-2 border-solid border-white hover:border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-xl">Login</a>
+                        <a href="" onclick="closeSideNav()" class="border-2 border-solid border-white hover:border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-xl">Login</a>
                     </div>
                     <div class="pt-6 pb-4">
-                        <a href="" class="bg-blue-800 hover:bg-blue-600 px-6 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-xl">Register</a>
+                        <a href="" onclick="closeSideNav()" class="bg-blue-800 hover:bg-blue-600 px-6 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-xl">Register</a>
                     </div>                    
                 </div>
                 <ul class="flex justify-center space-x-5">
                     <li class="">
-                        <a href="#">
+                        <a href="#" onclick="closeSideNav()">
                             <i class="fab fa-twitter text-3xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
                         </a>
                     </li>
                     <li class="">
-                        <a href="">
+                        <a href="" onclick="closeSideNav()">
                             <i class="fab fa-telegram-plane text-3xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
                         </a>
                     </li>
                     <li class="">
-                        <a href="">
+                        <a href="" onclick="closeSideNav()">
                             <i class="fab fa-youtube text-3xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
                         </a>
                     </li>
@@ -75,7 +75,7 @@
                 </div>
                 <div>
                     <ul class="md:flex space-x-10 hidden">
-                        <li class=""><a href="" class="hover:text-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 text-lg">About</a></li>
+                        <li class=""><a href="#about" class="hover:text-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 text-lg">About</a></li>
                         <li class=""><a href="" class="hover:text-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 text-lg">Login</a></li>
                         <li class=""><a href="#!" class="bg-blue-800 hover:bg-blue-600 px-6 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-lg">Register</a></li>
                     </ul>
@@ -193,7 +193,7 @@
     <!-- 2nd Section -->
     <div class="bg-light-dark">
         <section class="container lg:px-10 xl:px-20 mx-auto lg:pt-16 lg:pb-10 pt-10 pb-8 px-4">
-            <h2 class="font-inter text-blue-600 mb-5 uppercase tracking-wider">About</h2>
+            <h2 class="font-inter text-blue-600 mb-5 uppercase tracking-wider" id="about">About</h2>
             <div class="lg:flex lg:items-center lg:flex-row-reverse mb-5">
                 <div class="mx-auto flex justify-center lg-mx-0 lg:px-10 lg:pr-0">
                     <img src="assets/images/investmentblue.svg" alt="" class="w-44 sm:w-1/3 lg:w-5/6">

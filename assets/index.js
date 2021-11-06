@@ -5,14 +5,18 @@ const sidebar = document.querySelector("#sidebar");
 const body = document.querySelector("body");
 
 // add event listener
-menuButton.addEventListener("click", () => {
+menuButton.addEventListener("click", openSideNav);
+
+closeButton.addEventListener("click", closeSideNav);
+
+function openSideNav() {
     sidebar.classList.remove("-translate-x-full");
     body.classList.add("overflow-hidden");
     sidebar.classList.add("overlay-effect");
-});
+}
 
-closeButton.addEventListener("click", () => {
+function closeSideNav() {
     sidebar.classList.add("-translate-x-full");
     body.classList.remove("overflow-hidden");
     sidebar.classList.remove("overlay-effect");
-});
+}
