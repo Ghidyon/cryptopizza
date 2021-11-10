@@ -1,3 +1,3 @@
 # cryptopizza
 
-[View Live](https://ghidyon.github.io/cryptopizza/index.html)
+[View Live](https://ghidyon.github.io/cryptopizza/public/index.html)
