@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - CryptoPizza</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+
+    <!-- Fonts: Manrope & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Manrope:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+  </head>
+  <body class="bg-dark font-manrope font-bold text-white">
+    <!-- Mobile Navigation Bar -->
+    <div
+      id="sidebar"
+      class="
+        bg-dark
+        w-3/4
+        min-h-screen
+        z-50
+        absolute
+        inset-y-0
+        left-0
+        transform
+        -translate-x-full
+        transition
+        duration-200
+        ease-in-out
+        md:hidden
+      "
+    >
+      <nav class="px-6 md:hidden">
+        <div class="flex justify-end py-6">
+          <svg
+            id="x-button"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 cursor-pointer"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+        <div>
+          <div class="">
+            <a
+              href=""
+              onclick="closeSideNav()"
+              class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl"
+              >Wallet Setup</a
+            >
+            <a
+              href=""
+              onclick="closeSideNav()"
+              class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl"
+              >Withdraw</a
+            >
+            <a
+              href=""
+              onclick="closeSideNav()"
+              class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl"
+              >Buy Slice</a
+            >
+          </div>
+          <div class="text-center pt-9 pb-6">
+            <div class="pb-6">
+              <a
+                href=""
+                onclick="closeSideNav()"
+                class="
+                  border-2 border-solid border-white
+                  hover:border-blue-600
+                  hover:bg-blue-600
+                  px-8
+                  py-3
+                  rounded-full
+                  outline-none
+                  focus:outline-none
+                  ease-linear
+                  transition-all
+                  duration-150
+                  text-xl
+                "
+                >Logout</a
+              >
+            </div>
+          </div>
+          <ul class="flex justify-center space-x-5">
+            <li class="">
+              <a href="#" onclick="closeSideNav()">
+                <i
+                  class="
+                    fab
+                    fa-twitter
+                    text-3xl
+                    hover:text-blue-600
+                    ease-linear
+                    transition-all
+                    duration-150
+                  "
+                ></i>
+              </a>
+            </li>
+            <li class="">
+              <a href="" onclick="closeSideNav()">
+                <i
+                  class="
+                    fab
+                    fa-telegram-plane
+                    text-3xl
+                    hover:text-blue-600
+                    ease-linear
+                    transition-all
+                    duration-150
+                  "
+                ></i>
+              </a>
+            </li>
+            <li class="">
+              <a href="" onclick="closeSideNav()">
+                <i
+                  class="
+                    fab
+                    fa-youtube
+                    text-3xl
+                    hover:text-blue-600
+                    ease-linear
+                    transition-all
+                    duration-150
+                  "
+                ></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div
+      class="
+        lg:px-10
+        xl:px-20
+        md:max-w-screen-lg
+        lg:max-w-screen-xl
+        xl:max-w-screen-2xl
+        mx-auto
+      "
+    >
+      <header class="px-4">
+        <nav class="flex justify-between items-center py-5">
+          <!-- Hamburger on small devices -->
+          <button id="menu-button" class="cursor-pointer md:hidden block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </button>
+          <div class="md:w-28 w-12 md:block">
+            <a href="index.html">
+              <img
+                src="../assets/images/CryptoPizzaLogo.svg"
+                alt="Crypto Pizza Logo"
+                class="hidden md:block"
+              />
+              <img
+                src="../assets/images/logo.svg"
+                alt="Crypto Pizza Logo"
+                class="block md:hidden"
+              />
+            </a>
+          </div>
+          <div>
+            <ul class="md:flex space-x-10 hidden">
+              <li class="">
+                <a
+                  href=""
+                  class="
+                    hover:text-blue-600
+                    outline-none
+                    focus:outline-none
+                    ease-linear
+                    transition-all
+                    duration-150
+                    text-lg
+                  "
+                  >Wallet Setup</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href=""
+                  class="
+                    hover:text-blue-600
+                    outline-none
+                    focus:outline-none
+                    ease-linear
+                    transition-all
+                    duration-150
+                    text-lg
+                  "
+                  >Withdraw</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href=""
+                  class="
+                    hover:text-blue-600
+                    outline-none
+                    focus:outline-none
+                    ease-linear
+                    transition-all
+                    duration-150
+                    text-lg
+                    "
+                  >Buy Slice</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <script src="../assets/index.js"></script>
+  </body>
+</html>
