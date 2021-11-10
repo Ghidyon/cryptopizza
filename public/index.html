@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Pizza - Take a slice</title>
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Fonts: Manrope & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+</head>
+<body class="bg-dark font-manrope font-bold text-white">
+    <!-- Mobile Navigation Bar -->
+    <div id="sidebar" class="bg-dark w-3/4 min-h-screen z-50 absolute inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:hidden">
+        <nav class="px-6 md:hidden">
+            <div class="flex justify-end py-6">
+                <svg id="x-button" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <div>
+                <div class="">
+                    <a href="index.html" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">Home</a>
+                    <a href="" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">How it Works</a>
+                    <a href="#about" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">About</a>
+                    <a href="" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">FAQ</a>
+                </div>
+                <div class="text-center pt-9 pb-6">
+                    <div class="pb-6">
+                        <a href="login.html" onclick="closeSideNav()" class="border-2 border-solid border-white hover:border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-xl">Login</a>
+                    </div>
+                    <div class="pt-6 pb-4">
+                        <a href="signup.html" onclick="closeSideNav()" class="bg-blue-800 hover:bg-blue-600 px-6 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-xl">Register</a>
+                    </div>                    
+                </div>
+                <ul class="flex justify-center space-x-5">
+                    <li class="">
+                        <a href="#" onclick="closeSideNav()">
+                            <i class="fab fa-twitter text-3xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="" onclick="closeSideNav()">
+                            <i class="fab fa-telegram-plane text-3xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="" onclick="closeSideNav()">
+                            <i class="fab fa-youtube text-3xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="lg:px-10 xl:px-20 md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl mx-auto">
+        <header class="px-4">
+            <nav class="flex justify-between items-center py-5">
+                <!-- Hamburger on small devices -->
+                <button id="menu-button" class="cursor-pointer md:hidden block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h7" />
+                      </svg>
+                </button>
+                <div class="md:w-28 w-12 md:block">
+                    <a href="index.html">
+                        <img src="../assets/images/CryptoPizzaLogo.svg" alt="Crypto Pizza Logo" class="hidden md:block">
+                        <img src="../assets/images/logo.svg" alt="Crypto Pizza Logo" class="block md:hidden">
+                    </a>
+                </div>
+                <div>
+                    <ul class="md:flex space-x-10 hidden">
+                        <li class=""><a href="#about" class="hover:text-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 text-lg">About</a></li>
+                        <li class=""><a href="login.html" class="hover:text-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 text-lg">Login</a></li>
+                        <li class=""><a href="signup.html" class="bg-blue-800 hover:bg-blue-600 px-6 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-lg">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Main -->
+    <main class="container lg:px-10 xl:px-20 mx-auto text-center py-8 px-4 md:text-left">
+        <div class="lg:flex lg:items-center lg:justify-between lg:mt-5 lg:mb-20">
+            <div class="lg:w-1/2 2xl:pr-10">
+                <h2 class="font-inter text-blue-600 my-3 uppercase tracking-wider">Cryptopizza</h2>
+                <h1 class="font-inter leading-10 text-4xl md:text-5xl my-3 lg:text-6xl">Access presales with little capital and gain massive returns.</h1>
+                <p class="leading-9 my-3 py-5 text-gray-400 text-xl md:leading-8">
+                    A decentralized token sharing platform maximizing the gains of IDOs through community funding and participation in high yielding launchpads.
+                </p>
+                <div class="mt-7 hidden lg:block">
+                    <a href="?" class="font-inter bg-blue-800 border border-solid border-blue-800 hover:border-blue-600 hover:bg-blue-600 uppercase px-6 py-4 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150">Get Started</a>
+                </div>
+            </div>
+
+             <!-- Countdown -->
+            <div class="lg:hidden lg:bg-light-dark mb-5 py-5">
+                <div class="container lg:px-10 xl:px-20 mx-auto">
+                    <div class="rounded-lg text-center bg-light-dark flex justify-center items-center h-44">
+                        <div class="flex flex-wrap justify-center items-center px-2 font-inter">
+                            <p class="text-7xl text-gray-400 animate-bounce">6,000</p>
+                            &nbsp;
+                            <p class="text-lg tracking-widest">slices left</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="lg:w-5/12">
+                <div class="aspect-w-16 aspect-h-9 sm:w-4/5 rounded-2xl overflow-hidden my-10 mx-auto lg:w-full lg:-m-0 lg:self-end">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ew2BABdvZ4g?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="py-10 my-10 lg:hidden text-center">
+                <a href="?" class="font-inter bg-blue-800 border border-solid border-blue-800 hover:border-blue-600 hover:bg-blue-600 text-xl uppercase px-8 py-4 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150">Get Started</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Countdown -->
+    <div class="hidden lg:block lg:bg-light-dark mb-5">
+        <div class="container lg:px-10 xl:px-20 px-4 mx-auto">
+            <div class="rounded-lg text-center bg-light-dark flex justify-center items-center h-44">
+                <div class="flex flex-wrap justify-center items-center px-2 font-inter">
+                    <p class="text-7xl text-gray-400 animate-bounce">6,000</p>
+                    &nbsp;
+                    <p class="text-lg tracking-widest">slices left</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sections -->
+
+    <!-- 1st Section -->
+    <section class="container lg:px-10 xl:px-20 mx-auto lg:py-16 py-10 px-4">
+        <div class="lg:flex lg:items-center mb-5">
+            <div class="mx-auto flex justify-center lg-mx-0 lg:px-10 lg:pl-0">
+                <img src="../assets/images/analyticsblue.svg" alt="" class="w-44 sm:w-1/3 lg:w-5/6">
+            </div>
+            <div class="lg:w-full mt-5 lg:mt-0">
+                <h2 class="font-inter mb-5 text-3xl">Get a Slice</h2>
+                <p class="leading-9 text-gray-400 text-xl">Register and purchase a slice for only $100 and be on your way to earning tokens launched by high yielding launchpads.</p>
+                <div class="mt-8">
+                    <a href="" class="font-inter bg-blue-800 border-2 border-solid border-blue-800 hover:border-blue-600 hover:bg-blue-600 uppercase text-sm rounded-full px-6 py-3 outline-none focus:outline-none ease-linear transition-all duration-150">Get a Slice</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 2nd Section -->
+    <div class="bg-light-dark">
+        <section class="container lg:px-10 xl:px-20 mx-auto lg:pt-16 lg:pb-10 pt-10 pb-8 px-4">
+            <div class="lg:flex lg:items-center lg:flex-row-reverse mb-5">
+                <div class="mx-auto flex justify-center lg-mx-0 lg:px-10 lg:pr-0">
+                    <img src="../assets/images/investmentblue.svg" alt="" class="w-44 sm:w-1/3 lg:w-5/6">
+                </div>
+                <div class="lg:w-full mt-5 lg:mt-0">
+                    <h2 class="font-inter text-3xl mb-5">Own your Assets</h2>
+                    <p class="leading-9 text-gray-400 text-xl">Each tokens will be distributed according to slice holdings and you can choose to sell, hold or transfer tokens as you desire.</p>
+                    <div class="mt-8">
+                        <a href="" class="font-inter bg-blue-800 border-2 border-solid border-blue-800 hover:border-blue-600 hover:bg-blue-600 uppercase text-sm rounded-full px-6 py-3 outline-none focus:outline-none ease-linear transition-all duration-150">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- 3rd Section -->
+    <section class="container lg:px-10 xl:px-20 mx-auto lg:py-16 py-10 px-4">
+        <div class="lg:flex lg:items-center mb-5">
+            <div class="mx-auto flex justify-center lg-mx-0 lg:px-10 lg:pl-0">
+                <img src="../assets/images/startupblue.svg" alt="" class="w-44 sm:w-1/3 lg:w-5/6">
+            </div>
+            <div class="lg:w-full mt-5 lg:mt-0">
+                <h2 class="font-inter text-3xl mb-5">Maximize your Earnings</h2>
+                <p class="leading-9 text-gray-400 text-xl">Each presale we partake in have the ability to give nothing less than 2x thereby increasing your capital over time via multiple presales.</p>
+                <div class="mt-8">
+                    <a href="" class="font-inter bg-blue-800 border-2 border-solid border-blue-800 hover:border-blue-600 hover:bg-blue-600 uppercase text-sm rounded-full px-6 py-3 outline-none focus:outline-none ease-linear transition-all duration-150">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->   
+    <!-- 2nd Section -->
+    <div class="bg-light-dark">
+        <section class="container lg:px-10 xl:px-20 mx-auto lg:pt-16 lg:pb-10 pt-10 pb-8 px-4">
+            <h2 class="font-inter text-blue-600 mb-5 uppercase tracking-wider" id="about">About</h2>
+            <div class="lg:flex lg:items-center lg:flex-row-reverse mb-5">
+                <div class="mx-auto flex justify-center lg-mx-0 lg:px-10 lg:pr-0">
+                    <img src="../assets/images/investmentblue.svg" alt="" class="w-44 sm:w-1/3 lg:w-5/6">
+                </div>
+                <div class="lg:w-full mt-5 lg:mt-0">
+                    <h2 class="font-inter text-3xl mb-5">What is Crypto Pizza?</h2>
+                    <p class="leading-9 text-gray-400 text-xl">Crypto Pizza is a decentralized token sharing platform maximizing the gains of IDOs through community funding and participation in high yielding launchpads.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 3rd Section -->
+    <section class="container lg:px-10 xl:px-20 mx-auto lg:py-16 py-10 px-4">
+        <div class="lg:flex lg:items-center mb-5">
+            <div class="mx-auto flex justify-center lg-mx-0 lg:px-10 lg:pl-0">
+                <img src="../assets/images/analyticsblue.svg" alt="" class="w-44 sm:w-1/3 lg:w-5/6">
+            </div>
+            <div class="lg:w-full mt-5 lg:mt-0">
+                <h2 class="font-inter mb-5 text-3xl">Why Crypto Pizza?</h2>
+                <p class="leading-9 text-gray-400 text-xl">Getting into highly sought after presales are usually expensive meaning that many will not be able to get into it as most people do not have the bulk money to do so. We help community members partake in these launchpad token sales so as to benefit from the massive returns they give.</p>
+                <div class="mt-8">
+                    <a href="" class="font-inter bg-blue-800 border-2 border-solid border-blue-800 hover:border-blue-600 hover:bg-blue-600 uppercase text-sm rounded-full px-6 py-3 outline-none focus:outline-none ease-linear transition-all duration-150">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4th Section -->
+    <div class="bg-light-dark">
+    <section class="container lg:px-10 xl:px-20 mx-auto lg:py-16 py-10 px-4">
+        <div class="lg:flex lg:items-center lg:flex-row-reverse mb-5">
+            <div class="mx-auto flex justify-center lg-mx-0 lg:px-10 lg:pr-0">
+                <img src="../assets/images/cryptocurrency.svg" alt="" class="w-44 sm:w-1/3 lg:w-5/6">
+            </div>
+            <div class="lg:w-full mt-5 lg:mt-0">
+                <h2 class="font-inter text-3xl mb-5">Benefits</h2>
+                <p class="leading-9 text-xl text-gray-400">With as little as $100, you have the chance to 2x or more your investment in just one presale. Now imagine what will happen if we as a community participated in multiple presales this will render the possibilities endless as a 10x or more becomes possible.</p>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- 5th Section -->
+    <section class="container lg:px-10 xl:px-20 mx-auto lg:py-16 py-10 px-4">
+        <div class="lg:flex lg:items-center lg:flex-row mb-5">
+            <div class="mx-auto flex justify-center lg-mx-0 lg:px-10 lg:pl-0">
+                <img src="../assets/images/people.svg" alt="" class="w-44 sm:w-1/3 lg:w-5/6">
+            </div>
+            <div class="lg:w-full mt-5 lg:mt-0">
+                <h2 class="font-inter text-3xl mb-5">Join the Community</h2>
+                <p class="leading-9 text-gray-400 text-xl">The community uses a slice system of which each slice costs $100 and there is a total of 6000 slices. You can register for one or more slices by signing up through our website and paying the sum of 100 BUSD or more as you desire.</p>
+                <div class="mt-8">
+                    <a href="" class="font-inter bg-blue-800 border-2 border-solid border-blue-800 hover:border-blue-600 hover:bg-blue-600 uppercase text-sm rounded-full px-6 py-3 outline-none focus:outline-none ease-linear transition-all duration-150">Join</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7th Section -->
+    <div class="bg-light-dark">
+        <section class="container lg:px-10 xl:px-20 mx-auto lg:py-16 py-10 px-4">
+            <div class="lg:flex lg:items-center lg:flex-row-reverse mb-5">
+                <div class="mx-auto flex justify-center lg-mx-0 lg:px-10 lg:pr-0">
+                    <img src="../assets/images/workman.svg" alt="" class="w-44 sm:w-1/3 lg:w-5/6">
+                </div>
+                <div class="lg:w-full mt-5 lg:mt-0">
+                    <h2 class="font-inter text-3xl mb-5">The Confidence in the Success of our Business Model</h2>
+                    <p class="leading-9 text-xl text-gray-400">As opposed to many projects which begin with their own tokens and have to do a lot to make it grow, we are leveraging on our community effort to purchase tokens that have guaranteed success. The launch pads we are involved with at any given time will show track record success both of the tokens they launch and the pad itself, thereby putting us in the best position to make the most of our investment.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="px-4 container lg:px-10 xl:px-20 mx-auto">
+        <div class="border-solid py-5 md:flex justify-between items-center">
+            <p class="text-xs text-center text-gray-400 mb-5 md:mb-0">&copy; Copyright 2021 - Cryptopizza •&nbsp;All rights reserved.</p>
+            <ul class="flex space-x-5 justify-center">
+                <li class="">
+                    <a href="#">
+                        <i class="fab fa-twitter text-2xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="">
+                        <i class="fab fa-telegram-plane text-2xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="">
+                        <i class="fab fa-youtube text-2xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+<script src="../assets/index.js"></script>
+</html>

@@ -1,38 +1,119 @@
-:root{
-    --pizza-red: 234, 57, 39;
-    --pizza-red-dark: 45, 5, 6;
-    --pizza-yellow: 255, 210, 57;
-    --pizza-yellow-light: 239, 205, 115;
+:root {
+  --pizza-red: 234, 57, 39;
+  --pizza-red-dark: 45, 5, 6;
+  --pizza-yellow: 255, 210, 57;
+  --pizza-yellow-light: 239, 205, 115;
 }
 
 .font-inter {
-    font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .font-manrope {
-    font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 .overlay-effect {
-    box-shadow: 0 0 0 100vmax rgba(0,0,0,0.6);
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
 }
 
 .bg-dark {
-    background-color: #161616;
+  background-color: #161616;
 }
 
 .bg-light-dark {
-    background: #222;
+  background: #222;
 }
 
 @media (min-width: 1024px) {
-    .lg\:bg-light-dark {
-        background: #222;
-    }
+  .lg\:bg-light-dark {
+    background: #222;
+  }
 }
 
 .scroll-smooth {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+/* error page style */
+
+#notfound {
+  position: relative;
+  height: 90vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.notfound .notfound-404 {
+  height: 158px;
+  line-height: 153px;
+}
+
+.notfound .notfound-404 h1 {
+  color: #222;
+  font-size: 220px;
+  letter-spacing: 10px;
+  margin: 0px;
+  font-weight: 700;
+  text-shadow: 2px 2px 0px #c9c9c9, -2px -2px 0px #c9c9c9;
+}
+
+.notfound .notfound-404 h1 > span {
+  text-shadow: 2px 2px 0px #ffab00, -2px -2px 0px #ffab00, 0px 0px 8px #ff8700;
+  margin-bottom: 10p;
+}
+
+.notfound p {
+  color: #c9c9c9;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.notfound a {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: transparent;
+  color: #c9c9c9;
+  border: 2px solid #c9c9c9;
+  display: inline-block;
+  padding: 10px 25px;
+  font-weight: 700;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  border-radius: 8%;
+}
+
+.notfound a:hover {
+  color: #ffab00;
+  border-color: #ffab00;
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 {
+    height: 122px;
+    line-height: 122px;
+  }
+
+  .notfound .notfound-404 h1 {
+    font-size: 122px;
+  }
 }
 
 @tailwind base;

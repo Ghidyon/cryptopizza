@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Login - CryptoPizza</title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Fonts: Manrope & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+  </head>
+
+
+  <body class="bg-dark font-manrope font-bold text-white">
+
+    <!-- Mobile Navigation Bar -->
+    <div id="sidebar" class="bg-dark w-3/4 min-h-screen z-50 absolute inset-y-0 left-0 transform -translate-x-full transition duration-200 ease-in-out md:hidden">
+      <nav class="px-6 md:hidden">
+          <div class="flex justify-end py-6">
+              <svg id="x-button" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+          </div>
+          <div>
+              <div class="">
+                  <a href="index.html" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">Home</a>
+                  <a href="" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">How it Works</a>
+                  <a href="index.html#about" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">About</a>
+                  <a href="" onclick="closeSideNav()" class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl">FAQ</a>
+              </div>
+              <div class="text-center pt-9 pb-6">
+                  <div class="pb-6">
+                      <a href="login.html" onclick="closeSideNav()" class="border-2 border-solid border-white hover:border-blue-600 hover:bg-blue-600 px-8 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-xl">Login</a>
+                  </div>
+                  <div class="pt-6 pb-4">
+                      <a href="signup.html" onclick="closeSideNav()" class="bg-blue-800 hover:bg-blue-600 px-6 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-xl">Register</a>
+                  </div>                    
+              </div>
+              <ul class="flex justify-center space-x-5">
+                  <li class="">
+                      <a href="#" onclick="closeSideNav()">
+                          <i class="fab fa-twitter text-3xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
+                      </a>
+                  </li>
+                  <li class="">
+                      <a href="" onclick="closeSideNav()">
+                          <i class="fab fa-telegram-plane text-3xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
+                      </a>
+                  </li>
+                  <li class="">
+                      <a href="" onclick="closeSideNav()">
+                          <i class="fab fa-youtube text-3xl hover:text-blue-600 ease-linear transition-all duration-150"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="lg:px-10 xl:px-20 md:max-w-screen-lg lg:max-w-screen-xl xl:max-w-screen-2xl mx-auto">
+        <header class="px-4">
+            <nav class="flex justify-between items-center py-5">
+                <!-- Hamburger on small devices -->
+                <button id="menu-button" class="cursor-pointer md:hidden block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h7" />
+                      </svg>
+                </button>
+                <div class="md:w-28 w-12 md:block">
+                    <a href="index.html">
+                        <img src="../assets/images/CryptoPizzaLogo.svg" alt="Crypto Pizza Logo" class="hidden md:block">
+                        <img src="../assets/images/logo.svg" alt="Crypto Pizza Logo" class="block md:hidden">
+                    </a>
+                </div>
+                <div>
+                    <ul class="md:flex space-x-10 hidden">
+                        <li class=""><a href="index.html#about" class="hover:text-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 text-lg">About</a></li>
+                        <li class=""><a href="login.html" class="hover:text-blue-600 outline-none focus:outline-none ease-linear transition-all duration-150 text-lg">Login</a></li>
+                        <li class=""><a href="signup.html" class="bg-blue-800 hover:bg-blue-600 px-6 py-3 rounded-full outline-none focus:outline-none ease-linear transition-all duration-150 text-lg">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+
+    <!-- Image -->
+    <div class="py-6">
+      <div
+        class="
+          flex
+          bg-light-dark
+          rounded-lg
+          shadow-lg
+          overflow-hidden
+          mx-auto
+          max-w-sm
+          lg:max-w-4xl
+        "
+      >
+        <div
+          class="hidden lg:block lg:w-1/2 bg-cover"
+          style="background-image: url('../assets/images/helloImg.jpg')"
+        ></div>
+        
+        <div class="w-full p-8 lg:w-1/2">
+          <p class="text-xl text-gray-400 text-center">Welcome back!</p>
+          <a
+            href="#"
+            class="
+              flex
+              items-center
+              justify-center
+              mt-4
+              text-white
+              rounded-lg
+              shadow-md
+              hover:bg-gray-900
+            "
+          >
+            <div class="px-4 py-3">
+              <svg class="h-6 w-6 " viewBox="0 0 40 40">
+                <path
+                  d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
+                  fill="#FFC107"
+                />
+                <path
+                  d="M5.25497 12.2425L10.7308 16.2583C12.2125 12.59 15.8008 9.99999 20 9.99999C22.5491 9.99999 24.8683 10.9617 26.6341 12.5325L31.3483 7.81833C28.3716 5.04416 24.39 3.33333 20 3.33333C13.5983 3.33333 8.04663 6.94749 5.25497 12.2425Z"
+                  fill="#FF3D00"
+                />
+                <path
+                  d="M20 36.6667C24.305 36.6667 28.2167 35.0192 31.1742 32.34L26.0159 27.975C24.3425 29.2425 22.2625 30 20 30C15.665 30 11.9842 27.2359 10.5975 23.3784L5.16254 27.5659C7.92087 32.9634 13.5225 36.6667 20 36.6667Z"
+                  fill="#4CAF50"
+                />
+                <path
+                  d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
+                  fill="#1976D2"
+                />
+              </svg>
+            </div>
+            <p class="px-4 py-3 w-5/6 text-center text-gray-300 font-bold ">
+              Sign in with Google
+            </p>
+          </a>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="border-b w-1/5 lg:w-1/4"></span>
+            <a href="#" class="text-xs text-center uppercase"
+            >or login with email</a>
+            <span class="border-b w-1/5 lg:w-1/4"></span>
+          </div>
+          <div class="mt-4">
+            <label class="block text-sm font-bold mb-2 text-gray-400"
+              >Email Address</label>
+            <input
+              class="
+                bg-gray-200
+                text-black
+                focus:outline-none focus:shadow-outline
+                border border-gray-300
+                rounded
+                py-2
+                px-4
+                block
+                w-full
+                appearance-none
+                "
+                type="email" placeholder="youremail@address.com"
+                />
+          </div>
+          <div class="mt-4">
+            <div class="flex justify-between">
+              <label class="block text-gray-400 text-sm font-bold mb-2"
+              >Password</label>
+              <a href="#" class="text-xs text-gray-400">Forgot Password?</a>
+            </div>
+            <input
+            class="
+            bg-gray-200
+            text-black
+            focus:outline-none focus:shadow-outline
+            border border-gray-300
+            rounded
+            py-2
+            px-4
+            block
+            w-full
+            appearance-none
+            "
+            type="password" placeholder="*********"
+            />
+          </div>
+          <div class="mt-8">
+            <button
+            class="
+                bg-indigo-900
+                text-white
+                font-bold
+                py-2
+                px-4
+                w-full
+                rounded
+                hover:bg-gray-600
+                "
+            >
+              Login
+            </button>
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <span class="border-b w-1/5 md:w-1/4"></span>
+            <a href="signup.html" class="text-xs uppercase">or sign up</a>
+            <span class="border-b w-1/5 md:w-1/4"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="px-4 container lg:px-10 xl:px-20 mx-auto">
+      <div class="border-solid py-5 md:flex justify-between items-center">
+        <p class="text-xs text-center text-gray-400 mb-5 md:mb-0">
+          &copy; Copyright 2021 - Cryptopizza •&nbsp;All rights reserved.
+        </p>
+        <ul class="flex space-x-5 justify-center">
+          <li class="">
+            <a href="#">
+              <i
+                class="
+                  fab
+                  fa-twitter
+                  text-2xl
+                  hover:text-blue-600
+                  ease-linear
+                  transition-all
+                  duration-150
+                "
+              ></i>
+            </a>
+          </li>
+          <li class="">
+            <a href="">
+              <i
+                class="
+                  fab
+                  fa-telegram-plane
+                  text-2xl
+                  hover:text-blue-600
+                  ease-linear
+                  transition-all
+                  duration-150
+                "
+              ></i>
+            </a>
+          </li>
+          <li class="">
+            <a href="">
+              <i
+                class="
+                  fab
+                  fa-youtube
+                  text-2xl
+                  hover:text-blue-600
+                  ease-linear
+                  transition-all
+                  duration-150
+                "
+              ></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="../assets/index.js"></script>
+  </body>
+
+</html>

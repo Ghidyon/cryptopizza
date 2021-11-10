@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sign Up - CryptoPizza</title>
+
+    <link type="text/css" rel="stylesheet" href="../assets/style.css" />
+    <!-- Fonts: Manrope & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Manrope:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+  </head>
+
+  <body class="bg-dark font-manrope font-bold text-white">
+    <!-- Mobile Navigation Bar -->
+    <div
+      id="sidebar"
+      class="
+        bg-dark
+        w-3/4
+        min-h-screen
+        z-50
+        absolute
+        inset-y-0
+        left-0
+        transform
+        -translate-x-full
+        transition
+        duration-200
+        ease-in-out
+        md:hidden
+      "
+    >
+      <nav class="px-6 md:hidden">
+        <div class="flex justify-end py-6">
+          <svg
+            id="x-button"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 cursor-pointer"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+        <div>
+          <div class="">
+            <a
+              href="index.html"
+              onclick="closeSideNav()"
+              class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl"
+              >Home</a
+            >
+            <a
+              href=""
+              onclick="closeSideNav()"
+              class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl"
+              >How it Works</a
+            >
+            <a
+              href="index.html#about"
+              onclick="closeSideNav()"
+              class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl"
+              >About</a
+            >
+            <a
+              href=""
+              onclick="closeSideNav()"
+              class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl"
+              >FAQ</a
+            >
+          </div>
+          <div class="text-center pt-9 pb-6">
+            <div class="pb-6">
+              <a
+                href="login.html"
+                onclick="closeSideNav()"
+                class="
+                  border-2 border-solid border-white
+                  hover:border-blue-600
+                  hover:bg-blue-600
+                  px-8
+                  py-3
+                  rounded-full
+                  outline-none
+                  focus:outline-none
+                  ease-linear
+                  transition-all
+                  duration-150
+                  text-xl
+                "
+                >Login</a
+              >
+            </div>
+            <div class="pt-6 pb-4">
+              <a
+                href="signup.html"
+                onclick="closeSideNav()"
+                class="
+                  bg-blue-800
+                  hover:bg-blue-600
+                  px-6
+                  py-3
+                  rounded-full
+                  outline-none
+                  focus:outline-none
+                  ease-linear
+                  transition-all
+                  duration-150
+                  text-xl
+                "
+                >Register</a
+              >
+            </div>
+          </div>
+          <ul class="flex justify-center space-x-5">
+            <li class="">
+              <a href="#" onclick="closeSideNav()">
+                <i
+                  class="
+                    fab
+                    fa-twitter
+                    text-3xl
+                    hover:text-blue-600
+                    ease-linear
+                    transition-all
+                    duration-150
+                  "
+                ></i>
+              </a>
+            </li>
+            <li class="">
+              <a href="" onclick="closeSideNav()">
+                <i
+                  class="
+                    fab
+                    fa-telegram-plane
+                    text-3xl
+                    hover:text-blue-600
+                    ease-linear
+                    transition-all
+                    duration-150
+                  "
+                ></i>
+              </a>
+            </li>
+            <li class="">
+              <a href="" onclick="closeSideNav()">
+                <i
+                  class="
+                    fab
+                    fa-youtube
+                    text-3xl
+                    hover:text-blue-600
+                    ease-linear
+                    transition-all
+                    duration-150
+                  "
+                ></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div
+      class="
+        lg:px-10
+        xl:px-20
+        md:max-w-screen-lg
+        lg:max-w-screen-xl
+        xl:max-w-screen-2xl
+        mx-auto
+      "
+    >
+      <header class="px-4">
+        <nav class="flex justify-between items-center py-5">
+          <!-- Hamburger on small devices -->
+          <button id="menu-button" class="cursor-pointer md:hidden block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </button>
+          <div class="md:w-28 w-12 md:block">
+            <a href="index.html">
+              <img
+                src="../assets/images/CryptoPizzaLogo.svg"
+                alt="Crypto Pizza Logo"
+                class="hidden md:block"
+              />
+              <img
+                src="../assets/images/logo.svg"
+                alt="Crypto Pizza Logo"
+                class="block md:hidden"
+              />
+            </a>
+          </div>
+          <div>
+            <ul class="md:flex space-x-10 hidden">
+              <li class="">
+                <a
+                  href="index.html#about"
+                  class="
+                    hover:text-blue-600
+                    outline-none
+                    focus:outline-none
+                    ease-linear
+                    transition-all
+                    duration-150
+                    text-lg
+                  "
+                  >About</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="login.html"
+                  class="
+                    hover:text-blue-600
+                    outline-none
+                    focus:outline-none
+                    ease-linear
+                    transition-all
+                    duration-150
+                    text-lg
+                  "
+                  >Login</a
+                >
+              </li>
+              <li class="">
+                <a
+                  href="signup.html"
+                  class="
+                    bg-blue-800
+                    hover:bg-blue-600
+                    px-6
+                    py-3
+                    rounded-full
+                    outline-none
+                    focus:outline-none
+                    ease-linear
+                    transition-all
+                    duration-150
+                    text-lg
+                  "
+                  >Register</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class="py-8 overflow-hidden flex items-center justify-center">
+      <!-- Container -->
+      <div class="container mx-auto">
+        <div class="flex justify-center px-6">
+          <!-- Row -->
+          <div class="w-full xl:w-3/4 lg:w-11/12 flex">
+            <!-- Col -->
+            <div
+              class="
+                w-full
+                h-auto
+                bg-light-dark
+                hidden
+                lg:block
+                lg:w-5/12
+                bg-cover
+                rounded-l-lg
+              "
+              style="background-image: url('../assets/images/helloImg.jpg')"
+            ></div>
+            <!-- Col -->
+            <div
+              class="
+                w-full
+                lg:w-7/12
+                bg-light-dark
+                p-5
+                rounded-lg
+                lg:rounded-l-none
+              "
+            >
+              <h3 class="pt-4 text-2xl text-center">Create an Account</h3>
+              <form class="px-8 pt-6 pb-8 mb-4 bg-light-dark rounded">
+                <div class="mb-4">
+                  <label
+                    class="block mb-2 text-sm font-bold text-gray-700"
+                    for="email"
+                  >
+                    Email
+                  </label>
+                  <input
+                    class="
+                      w-full
+                      px-3
+                      py-2
+                      mb-3
+                      text-sm
+                      leading-tight
+                      text-gray-700
+                      border
+                      rounded
+                      shadow
+                      appearance-none
+                      focus:outline-none
+                      focus:shadow-outline
+                    "
+                    id="email"
+                    type="email"
+                    placeholder="email@address.com"
+                  />
+                </div>
+                <div class="mb-4 md:flex md:justify-between">
+                  <div class="mb-4 md:mr-2 md:mb-0">
+                    <label
+                      class="block mb-2 text-sm font-bold text-gray-700"
+                      for="password"
+                    >
+                      Password
+                    </label>
+                    <input
+                      class="
+                        w-full
+                        px-3
+                        py-2
+                        mb-3
+                        text-sm
+                        leading-tight
+                        text-gray-700
+                        border border-red-500
+                        rounded
+                        shadow
+                        appearance-none
+                        focus:outline-none
+                        focus:shadow-outline
+                      "
+                      id="password"
+                      type="password"
+                      placeholder="******************"
+                    />
+                    <p class="text-xs italic text-red-500">
+                      Please choose a password.
+                    </p>
+                  </div>
+                  <div class="md:ml-2">
+                    <label
+                      class="block mb-2 text-sm font-bold text-gray-700"
+                      for="c_password"
+                    >
+                      Confirm Password
+                    </label>
+                    <input
+                      class="
+                        w-full
+                        px-3
+                        py-2
+                        mb-3
+                        text-sm
+                        leading-tight
+                        text-gray-700
+                        border
+                        rounded
+                        shadow
+                        appearance-none
+                        focus:outline-none
+                        focus:shadow-outline
+                      "
+                      id="c_password"
+                      type="password"
+                      placeholder="******************"
+                    />
+                  </div>
+                </div>
+                <div class="mb-6 text-center">
+                  <button
+                    class="
+                      w-full
+                      px-4
+                      py-2
+                      font-bold
+                      text-white
+                      bg-indigo-900
+                      rounded-full
+                      hover:bg-blue-700
+                      focus:outline-none
+                      focus:shadow-outline
+                    "
+                    type="button"
+                  >
+                    Register Account
+                  </button>
+                </div>
+                <hr class="mb-6 border-t" />
+
+                <div class="text-center">
+                  <a
+                    class="
+                      inline-block
+                      text-sm text-blue-500
+                      align-baseline
+                      hover:text-blue-800
+                    "
+                    href="login.html"
+                  >
+                    Already have an account? Login!
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="px-4 container lg:px-10 xl:px-20 mx-auto">
+      <div class="border-solid py-5 md:flex justify-between items-center">
+        <p class="text-xs text-center text-gray-400 mb-5 md:mb-0">
+          &copy; Copyright 2021 - Cryptopizza •&nbsp;All rights reserved.
+        </p>
+        <ul class="flex space-x-5 justify-center">
+          <li class="">
+            <a href="#">
+              <i
+                class="
+                  fab
+                  fa-twitter
+                  text-2xl
+                  hover:text-blue-600
+                  ease-linear
+                  transition-all
+                  duration-150
+                "
+              ></i>
+            </a>
+          </li>
+          <li class="">
+            <a href="">
+              <i
+                class="
+                  fab
+                  fa-telegram-plane
+                  text-2xl
+                  hover:text-blue-600
+                  ease-linear
+                  transition-all
+                  duration-150
+                "
+              ></i>
+            </a>
+          </li>
+          <li class="">
+            <a href="">
+              <i
+                class="
+                  fab
+                  fa-youtube
+                  text-2xl
+                  hover:text-blue-600
+                  ease-linear
+                  transition-all
+                  duration-150
+                "
+              ></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../assets/index.js"></script>
+  </body>
+</html>
