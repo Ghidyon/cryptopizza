@@ -71,13 +71,7 @@
               href=""
               onclick="closeSideNav()"
               class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl"
-              >Withdraw</a
-            >
-            <a
-              href=""
-              onclick="closeSideNav()"
-              class="rounded-lg block py-4 px-5 hover:bg-blue-600 text-xl"
-              >Buy Slice</a
+              >Buy Slices</a
             >
           </div>
           <div class="text-center pt-9 pb-6">
@@ -199,7 +193,7 @@
             </a>
           </div>
           <div>
-            <ul class="md:flex space-x-10 hidden">
+            <ul class="md:flex space-x-10 hidden items-center">
               <li class="">
                 <a
                   href=""
@@ -226,30 +220,96 @@
                     transition-all
                     duration-150
                     text-lg
-                  "
-                  >Withdraw</a
-                >
-              </li>
-              <li class="">
-                <a
-                  href=""
-                  class="
-                    hover:text-blue-600
-                    outline-none
-                    focus:outline-none
-                    ease-linear
-                    transition-all
-                    duration-150
-                    text-lg
                     "
-                  >Buy Slice</a
+                  >Buy Slices</a
                 >
               </li>
+              <!-- On larger screens -->
+              <div class="items-center hidden md:flex">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div class="px-2">
+                    <p class="italic text-sm">johndoe@gmail.com</p>
+                    <span>$100.00</span>
+                </div>
+              </div>
             </ul>
           </div>
-        </nav>
+        </nav>       
       </header>
     </div>
+
+    <!-- Dashboard -->
+    <main class="container mx-auto px-4 py-5">
+        <!-- On mobile screens -->
+        <div class="flex items-center md:hidden">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <div class="px-2">
+                <p class="italic text-sm">johndoe@gmail.com</p>
+                <span>$400</span>
+            </div>  
+        </div>
+        
+        <p class="mt-5 mb-5 text-3xl">Dashboard</p>
+        
+        <!-- Account Options -->
+        <div class="md:flex">
+
+            <section class="md:w-1/3">
+                <div class="bg-light-dark rounded-lg px-3 py-3">
+                    <h2 class="font-inter text-blue-600 uppercase text-xs tracking-wider">
+                        Cryptopizza
+                    </h2>
+                    <div class="flex flex-wrap justify-between items-center mt-7">
+                        <div class="w-2/3">
+                            <p class="font-inter text-gray-400">Balance</p>
+                            <p class="text-4xl my-2 tracking-wider">$<span>400</span></p>
+                        </div>
+                        <div class="w-1/3">
+                            <p class="font-inter text-gray-400">Slices</p>
+                            <p class="text-4xl my-2 tracking-wider">4</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 mb-4">
+                        <a
+                            href=""
+                            class="
+                            font-inter
+                            bg-blue-800
+                            border border-solid border-blue-800
+                            hover:border-blue-600
+                            hover:bg-blue-600
+                            uppercase
+                            text-sm
+                            px-4
+                            py-3
+                            rounded-full
+                            outline-none
+                            focus:outline-none
+                            ease-linear
+                            transition-all
+                            duration-150
+                            "
+                            >Buy Slices</a
+                        >
+                    </div>
+                </div>
+            </section>
+            
+            <!-- News - Stay Updated -->
+            <section class="md:w-2/3">
+
+            </section>
+        </div>
+
+    </main>
 
     <script src="../assets/index.js"></script>
   </body>
